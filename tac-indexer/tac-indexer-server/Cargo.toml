@@ -1,0 +1,40 @@
+[package]
+name = "tac-indexer-server"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+tac-indexer-proto = { path = "../tac-indexer-proto" }
+tac-indexer-logic = { path = "../tac-indexer-logic" }
+tac-indexer-migration = { path = "../tac-indexer-migration" }
+actix-web = { workspace = true }
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+blockscout-service-launcher = { workspace = true, features = ["database-0_12" ] }
+config = { workspace = true }
+sea-orm = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = [ "rt-multi-thread", "macros" ] }
+tonic = { workspace = true }
+tracing = { workspace = true }
+
+# # Uncomment if needed
+# ethers = "2.0.0"
+# blockscout-display-bytes = "1.0"
+# serde_with = "2.1"
+
+
+[dev-dependencies]
+blockscout-service-launcher = { workspace = true, features = [ "test-server","test-database"] }
+pretty_assertions = { workspace = true }
+reqwest = { workspace = true, features = ["json"]}
+# # Uncomment if needed
+# mockall = "0.11"
+# bytes = "1.5.0"
+# hex = "0.4.3"
+# rand = "0.8"
+# rstest = "0.18.2"
+# sea-orm = { version = "*", features = [ "sqlx-sqlite" ]}
+# tokio-stream = { version = "0.1", features = ["net"] }
