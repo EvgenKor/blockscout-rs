@@ -10,7 +10,7 @@ anyhow = "1.0"
 blockscout-display-bytes = "1.0"
 tracing = "0.1"
 
-sea-orm = { version = "0.12.2", features = [
+sea-orm = { workspace = true, features = [
     "sqlx-postgres",
     "runtime-tokio-rustls",
     "macros",
