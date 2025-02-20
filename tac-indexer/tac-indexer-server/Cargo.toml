@@ -11,7 +11,7 @@ tac-indexer-migration = { path = "../tac-indexer-migration" }
 actix-web = { workspace = true }
 anyhow = { workspace = true }
 async-trait = { workspace = true }
-blockscout-service-launcher = { workspace = true, features = ["database-0_12" ] }
+blockscout-service-launcher = { workspace = true }
 config = { workspace = true }
 sea-orm = { workspace = true }
 serde = { workspace = true }
@@ -27,7 +27,7 @@ tracing = { workspace = true }
 
 
 [dev-dependencies]
-blockscout-service-launcher = { workspace = true, features = [ "test-server","test-database"] }
+blockscout-service-launcher = { workspace = true, features = [ "test-server", "test-database", "database-1_0" ] }
 pretty_assertions = { workspace = true }
 reqwest = { workspace = true, features = ["json"]}
 # # Uncomment if needed

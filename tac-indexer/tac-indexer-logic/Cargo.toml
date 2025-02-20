@@ -39,7 +39,7 @@ sea-orm = { workspace = true, features = [
 [dev-dependencies]
 blockscout-service-launcher = { workspace = true, features = [ 
     
-    "test-database", "database-0_12"
+    "test-database", "database-1_0"
     
 ] }
 pretty_assertions = { workspace = true }
